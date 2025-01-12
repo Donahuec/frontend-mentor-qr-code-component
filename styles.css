@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --slate300: hsl(212, 45%, 89%);
+  --slate500: hsl(216, 15%, 48%);
+  --slate900: hsl(218, 44%, 22%);
+
+  --fontFamily: "Outfit", serif;
+
+  --boldFontSize: calc(22 / 16 * 1rem);
+  --boldWeight: 700;
+  --boldLineHeight: 1.2;
+  --boldLetterSpacing: 0px;
+
+  --bodyFontSize: calc(15 / 16 * 1rem);
+  --bodyWeight: 400;
+  --bodyLineHeight: 1.4;
+  --bodyLetterSpacing: 0.2px;
+
+  --space200: 16px;
+  --space300: 24px;
+  --space500: 40px;
+  --borderRadius: 10px;
+}
+
+.text-variant-bold {
+  color: var(--slate900);
+  font-size: var(--boldFontSize);
+  font-weight: var(--boldWeight);
+  line-height: var(--boldLineHeight);
+  letter-spacing: var(--boldLetterSpacing);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--slate300);
+  color: var(--slate500);
+
+  font-family: var(--fontFamily);
+  font-size: var(--bodyFontSize);
+  font-weight: var(--bodyWeight);
+  font-style: normal;
+  font-optical-sizing: auto;
+  line-height: var(--bodyLineHeight);
+  letter-spacing: var(--bodyLetterSpacing);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: var(--borderRadius);
+}
+
+.card {
+  width: 320px;
+  margin-inline: auto;
+  /* Optical Centering the Card */
+  margin-block-end: var(--space300);
+
+  padding: var(--space200);
+  padding-block-end: var(--space500);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space200);
+
+  background-color: var(--white);
+  border-radius: var(--borderRadius);
+
+  .card-text {
+    padding-inline: var(--space200);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space200);
+    text-align: center;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 0.75rem;
+  color: var(--slate900);
+  a {
+    color: hsl(216, 78%, 37%);
+  }
+}
