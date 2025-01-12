@@ -72,9 +72,6 @@ img {
 .card {
   width: 320px;
   margin-inline: auto;
-  /* Optical Centering the Card */
-  margin-block-end: var(--space300);
-
   padding: var(--space200);
   padding-block-end: var(--space500);
 
